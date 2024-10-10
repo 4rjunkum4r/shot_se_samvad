@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import { Footer, Navbar } from "../components";
-const AboutPage = () => {
+const AboutUs = () => {
   return (
     <>
       <Navbar />
@@ -27,7 +27,12 @@ const AboutPage = () => {
         <div className="row">
           <div className="col-md-3 col-sm-6 mb-3 px-3">
             <div className="card h-100">
-              <img className="card-img-top img-fluid" src="./assets/images/photography.jpg" alt="" height={160} />
+              <img
+                className="card-img-top img-fluid"
+                src="./assets/images/photography.jpg"
+                alt=""
+                height={160}
+              />
               <div className="card-body">
                 <h5 className="card-title text-center">Photography</h5>
               </div>
@@ -35,7 +40,12 @@ const AboutPage = () => {
           </div>
           <div className="col-md-3 col-sm-6 mb-3 px-3">
             <div className="card h-100">
-              <img className="card-img-top img-fluid" src="./assets/images/videography.jpg" alt="" height={160} />
+              <img
+                className="card-img-top img-fluid"
+                src="./assets/images/videography.jpg"
+                alt=""
+                height={160}
+              />
               <div className="card-body">
                 <h5 className="card-title text-center">Videography</h5>
               </div>
@@ -43,7 +53,12 @@ const AboutPage = () => {
           </div>
           <div className="col-md-3 col-sm-6 mb-3 px-3">
             <div className="card h-100">
-              <img className="card-img-top img-fluid" src="./assets/images/software.jpg" alt="" height={160} />
+              <img
+                className="card-img-top img-fluid"
+                src="./assets/images/software.jpg"
+                alt=""
+                height={160}
+              />
               <div className="card-body">
                 <h5 className="card-title text-center">Software</h5>
               </div>
@@ -51,7 +66,12 @@ const AboutPage = () => {
           </div>
           <div className="col-md-3 col-sm-6 mb-3 px-3">
             <div className="card h-100">
-              <img className="card-img-top img-fluid" src="./assets/images/p5.jpg" alt="" height={160} />
+              <img
+                className="card-img-top img-fluid"
+                src="./assets/images/hardware.jpg"
+                alt=""
+                height={160}
+              />
               <div className="card-body">
                 <h5 className="card-title text-center">Hardware</h5>
               </div>
@@ -61,7 +81,7 @@ const AboutPage = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutUs;
