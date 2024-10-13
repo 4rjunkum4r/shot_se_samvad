@@ -4,68 +4,49 @@ const Footer = () => {
   return (
     <footer className="mb-0 text-center">
       <div className="d-flex align-items-center justify-content-between px-4 py-5">
-        <div className="col-md-6 text-start">
-          <p className="mb-3 mb-md-0">
-            Made with ❤️ by Arjun Kumar
+        <div className=" text-start">
+          <p className="fw-bold fs-4">
+            Contact Us <i class="fa-solid fa-angles-right mx-2"></i>
             <a
-              className="text-dark fs-4 me-3 mx-1"
-              href="https://github.com/4rjunkum4r"
+              className="text-dark"
+              href="https://instagram.com/shotsesamvad"
               target="_blank"
               rel="noreferrer"
             >
-              <i className="fa fa-github"></i>
+              <i className="fa fa-instagram mx-2"></i>
+            </a>
+            <a
+              className="text-dark"
+              href="https://youtube.com/shotsesamvad"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fa fa-youtube mx-2"></i>
+
+              <a
+                href="tel:+916260085106"
+                className="text-dark"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="fa fa-phone mx-2"></i>
+              </a>
+
+              <a
+                href="mailto:shotsesamvad11@gmail.com"
+                className="text-dark"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="fa fa-envelope mx-2"></i>
+              </a>
             </a>
           </p>
-        </div>
-
-        <div className="col-md-6 text-md-start text-start">
-          <div className="mb-3">
-            <p className="fw-bold">Contact Us:</p> {/* Bold text */}
-            <i className="fa fa-phone me-2 mx-1"></i>
-            <a
-              href="tel:+1234567890"
-              className="text-dark"
-              target="_blank"
-              rel="noreferrer"
-            >
-              +91 123 456 7890
-            </a>
-            <i className="fa fa-envelope me-2 mx-1"></i>
-            <a
-              href="mailto:shotsesamvad@gmail.com"
-              className="text-dark"
-              target="_blank"
-              rel="noreferrer"
-            >
-              shotsesamvad@gmail.com
-            </a><br/>
-            <a
-              className="text-dark fs-4 me-3 mx-1"
-              href="https://instagram.com/yourusername"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa fa-instagram"></i>
-            </a>
-            <a
-              className="text-dark fs-4 me-3 mx-1"
-              href="https://facebook.com/yourusername"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa fa-facebook"></i>
-            </a>
-            <a
-              className="text-dark fs-4 me-3 mx-1"
-              href="https://youtube.com/yourchannel"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa fa-youtube"></i>
-            </a>
-          </div>
+          <br />
         </div>
       </div>
+      <p className="mb-3 mb-md-0">Made with ❤️ in Bhopal, India</p>
+      <p>Copyright © 2024 - Shot Se Samvad</p>
     </footer>
   );
 };
