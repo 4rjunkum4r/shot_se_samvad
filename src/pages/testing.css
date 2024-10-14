@@ -1,94 +1,112 @@
+/* testing.css */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background color */
+}
+
 .home-container {
+  max-width: 1200px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding around the container */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 5%; /* Adjust padding for smaller screens */
+  flex-direction: column; /* Stack sections vertically */
+  gap: 40px; /* Spacing between sections */
 }
 
 .section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  width: 100%; /* Use full width for responsiveness */
-  max-width: 800px; /* Maintain a max width for larger screens */
-  padding: 20px; /* Reduce padding for smaller screens */
-  margin: 30px 0;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff; 
+  background: white; /* White background for sections */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside sections */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth transitions for visibility */
 }
 
-/* Headings */
-.section h2 {
-  font-size: 1.5rem; /* Smaller heading size for mobile */
-  margin-bottom: 15px;
-  color: #333; 
-}
-
-/* Paragraph styling */
-.section p {
-  font-size: 0.9rem; /* Slightly smaller text for mobile */
-  line-height: 1.6; 
-  color: #555; 
-}
-
-/* When the section becomes visible */
 .section.visible {
-  opacity: 1;
-  transform: translateY(0); 
+  transform: translateY(0); /* Reset translation when visible */
+  opacity: 1; /* Fade-in effect */
 }
 
-/* Slide from the right */
-.section-right {
-  transform: translateX(100%);
-}
-
-/* Slide from the left */
 .section-left {
-  transform: translateX(-100%);
+  transform: translateY(50px); /* Initial state for left sections */
+  opacity: 0; /* Start hidden */
 }
 
-/* Hover effect on section titles */
-.section h2:hover {
-  text-decoration: underline; 
-  cursor: pointer; 
+.section-right {
+  transform: translateY(-50px); /* Initial state for right sections */
+  opacity: 0; /* Start hidden */
 }
 
-/* Media Queries for Smaller Screens */
+h2 {
+  color: #333; /* Darker color for headings */
+  font-size: 28px; /* Increased font size for headings */
+  margin-bottom: 15px; /* Space below headings */
+  text-align: left; /* Align headings to the left */
+  position: relative; /* Required for pseudo-element positioning */
+}
+
+h2:after {
+  content: ''; /* Pseudo-element for the underline effect */
+  display: block;
+  width: 50px; /* Underline width */
+  height: 4px; /* Underline height */
+  background: #007bff; /* Color of the underline */
+  margin-top: 5px; /* Space above the underline */
+}
+
+.content {
+  margin-top: 15px; /* Space above the content */
+  font-size: 18px; /* Increased font size for content */
+}
+
+.list {
+  margin: 10px 0; /* Spacing around lists */
+  padding-left: 20px; /* Indentation for lists */
+}
+
+.list li {
+  margin-bottom: 10px; /* Spacing between list items */
+  line-height: 1.5; /* Line height for readability */
+}
+
+.section-image {
+  width: 200px; /* Set the width to 200px */
+  height: 200px; /* Set the height to 200px */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px; /* Rounded corners for images */
+  margin: 20px 0; /* Spacing around images */
+  display: block; /* Ensures the image is displayed as a block element */
+  margin-left: auto; /* Centers the image horizontally */
+  margin-right: auto; /* Centers the image horizontally */
+}
+
 @media (max-width: 768px) {
   .home-container {
-      padding: 30px 10%; /* Less padding on small screens */
+    padding: 10px; /* Reduced padding for mobile */
+  }
+  
+  h2 {
+    font-size: 24px; /* Smaller heading for mobile */
   }
 
-  .section {
-      padding: 15px; /* Reduce padding further on mobile */
-      margin: 20px 0; /* Less margin */
+  .content {
+    font-size: 16px; /* Smaller content font size for mobile */
   }
 
-  .section h2 {
-      font-size: 1.4rem; /* Slightly smaller heading */
-  }
-
-  .section p {
-      font-size: 0.85rem; /* Smaller paragraph text */
+  .section-image {
+    width: 150px; /* Smaller image size for mobile */
+    height: 150px; /* Smaller image size for mobile */
   }
 }
 
 @media (max-width: 480px) {
-  .home-container {
-      padding: 20px 5%; /* Minimal padding on very small screens */
+  h2 {
+    font-size: 20px; /* Further reduced heading size for smaller screens */
   }
 
-  .section {
-      padding: 10px; /* Minimum padding for small devices */
-      margin: 15px 0; /* Reduced margin */
-  }
-
-  .section h2 {
-      font-size: 1.2rem; /* Adjusted for mobile */
-  }
-
-  .section p {
-      font-size: 0.8rem; /* Smaller text for mobile */
+  .content {
+    font-size: 14px; /* Further reduced content font size for smaller screens */
   }
 }
