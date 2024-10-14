@@ -1,10 +1,10 @@
 /* testing.css */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Open Sans', sans-serif; /* Use Open Sans for body text */
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Light background color */
+  background-color: #F4F4F4; /* Light background color */
 }
 
 .home-container {
@@ -17,69 +17,59 @@ body {
 }
 
 .section {
-  background: white; /* White background for sections */
+  position: relative; /* Required for positioning overlay */
   border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside sections */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s, opacity 0.3s; /* Smooth transitions for visibility */
+  overflow: hidden; /* Ensure content doesn't overflow */
 }
 
-.section.visible {
-  transform: translateY(0); /* Reset translation when visible */
-  opacity: 1; /* Fade-in effect */
-}
-
-.section-left {
-  transform: translateY(50px); /* Initial state for left sections */
-  opacity: 0; /* Start hidden */
-}
-
-.section-right {
-  transform: translateY(-50px); /* Initial state for right sections */
-  opacity: 0; /* Start hidden */
-}
-
-h2 {
-  color: #333; /* Darker color for headings */
-  font-size: 28px; /* Increased font size for headings */
-  margin-bottom: 15px; /* Space below headings */
-  text-align: left; /* Align headings to the left */
-  position: relative; /* Required for pseudo-element positioning */
-}
-
-h2:after {
-  content: ''; /* Pseudo-element for the underline effect */
-  display: block;
-  width: 50px; /* Underline width */
-  height: 4px; /* Underline height */
-  background: #007bff; /* Color of the underline */
-  margin-top: 5px; /* Space above the underline */
-}
-
-.content {
-  margin-top: 15px; /* Space above the content */
-  font-size: 18px; /* Increased font size for content */
-}
-
-.list {
-  margin: 10px 0; /* Spacing around lists */
-  padding-left: 20px; /* Indentation for lists */
-}
-
-.list li {
-  margin-bottom: 10px; /* Spacing between list items */
-  line-height: 1.5; /* Line height for readability */
+.section-image-container {
+  position: relative; /* Position relative to contain overlay */
 }
 
 .section-image {
-  width: 200px; /* Set the width to 200px */
-  height: 200px; /* Set the height to 200px */
+  width: 100%; /* Full width for responsiveness */
+  height: 300px; /* Fixed height for images */
   object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 8px; /* Rounded corners for images */
-  margin: 20px 0; /* Spacing around images */
-  display: block; /* Ensures the image is displayed as a block element */
-  margin-left: auto; /* Centers the image horizontally */
-  margin-right: auto; /* Centers the image horizontally */
+}
+
+.overlay {
+  position: absolute; /* Absolute positioning for the overlay */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  bottom: 0; /* Align to bottom */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  color: white; /* White text color */
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column; /* Stack title and content */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px; /* Padding around the text */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.section.visible .overlay {
+  opacity: 1; /* Fade-in effect when section is visible */
+}
+
+/* Styling for headings */
+h2 {
+  color: #D8B94A; /* Soft gold color for headings */
+  font-size: 36px; /* Increased font size for headings */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat for headings */
+  font-weight: bold; /* Bold font for headings */
+  margin-bottom: 15px; /* Space below headings */
+  text-align: center; /* Center text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Styling for paragraphs */
+.content {
+  margin-top: 15px; /* Space above the content */
+  font-size: 24px; /* Increased font size for content */
+  text-align: center; /* Center text */
+  line-height: 1.5; /* Spacing for readability */
 }
 
 @media (max-width: 768px) {
@@ -88,25 +78,24 @@ h2:after {
   }
   
   h2 {
-    font-size: 24px; /* Smaller heading for mobile */
+    font-size: 30px; /* Smaller heading for mobile */
   }
 
   .content {
-    font-size: 16px; /* Smaller content font size for mobile */
+    font-size: 20px; /* Smaller content font size for mobile */
   }
 
   .section-image {
-    width: 150px; /* Smaller image size for mobile */
-    height: 150px; /* Smaller image size for mobile */
+    height: 200px; /* Smaller image size for mobile */
   }
 }
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 20px; /* Further reduced heading size for smaller screens */
+    font-size: 24px; /* Further reduced heading size for smaller screens */
   }
 
   .content {
-    font-size: 14px; /* Further reduced content font size for smaller screens */
+    font-size: 16px; /* Further reduced content font size for smaller screens */
   }
 }
