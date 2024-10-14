@@ -14,7 +14,7 @@ function Home() {
             style={{ width: '100%', objectFit: 'cover' }}
           />
           <div className="card-img-overlay d-flex align-items-center">
-            <div className="container" style={{ maxHeight: '60vh', overflowY: 'auto', overflowX: 'hidden' }}>
+            <div className="container" style={{ maxHeight: 'auto', overflowY: 'auto', overflowX: 'hidden' }}>
               <h5 className="card-title text fw-lighter fs-3 fs-md-1">
                 Hello camera enthusiast
               </h5>

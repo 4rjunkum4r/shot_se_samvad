@@ -38,6 +38,11 @@ const Navbar = () => {
                 About Us
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/testing">
+                Testing
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

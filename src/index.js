@@ -7,6 +7,7 @@ import {
   Home,
   AboutUs,
   PageNotFound,
+  Testing,
 } from "./pages";
 import { Toaster } from "react-hot-toast";
 
@@ -17,6 +18,7 @@ root.render(
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path="/testing" element={<Testing />}/>
         </Routes>
     <Toaster />
   </BrowserRouter>
