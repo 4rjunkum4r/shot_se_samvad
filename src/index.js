@@ -4,10 +4,8 @@ import "../node_modules/font-awesome/css/font-awesome.min.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
-  Home,
-  AboutUs,
+  Homepage,
   PageNotFound,
-  Testing,
 } from "./pages";
 import { Toaster } from "react-hot-toast";
 
@@ -15,10 +13,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="*" element={<PageNotFound />} />
-          <Route path="/testing" element={<Testing />}/>
         </Routes>
     <Toaster />
   </BrowserRouter>

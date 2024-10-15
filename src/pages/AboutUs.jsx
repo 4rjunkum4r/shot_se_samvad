@@ -20,7 +20,7 @@ const AboutUs = () => {
           quo saepe dolorem optio minus sint nemo totam dolorum! Reprehenderit
           delectus expedita a alias nam recusandae illo debitis repellat libero,
           quasi explicabo molestiae saepe, dolorem tempore itaque eveniet quam
-          dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum
+          dignissimos blanditiis excepturi harum numquam vel nihil? Ipsu
         </p>
 
         <h2 className="text-center py-4">Our Expertise</h2>
