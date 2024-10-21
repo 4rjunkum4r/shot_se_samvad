@@ -1,13 +1,23 @@
-/* src/pages/PageNotFound.css */
+/* PageNotFound.css */
+
 .page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the footer is at the bottom */
+  align-items: center;
+  min-height: 82.7vh; /* Full height of the viewport */
   text-align: center;
-  margin-top: 100px; /* Center the content vertically */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.page-not-found h1 {
-  font-size: 3em;
+.page-not-found-content {
+  flex-grow: 1; /* Makes the content take up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.page-not-found p {
-  font-size: 1.5em;
+.go-back-button {
+  margin-top: 20px;
 }
