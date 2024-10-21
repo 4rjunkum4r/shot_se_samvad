@@ -1,35 +1,126 @@
+/* Global reset */
 .navbar {
+  background-color: #938888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .navbar-brand {
+/* Brand logo styling */
+.navbar-brand {
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #000;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.navbar .nav-link {
-  color: #000;
+.navbar-brand:hover {
+  color: #ff6b6b;
 }
 
-.navbar .btn-theme-toggle {
-  background: transparent;
-  border: 2px solid #ccc;
-  padding: 5px 10px;
-  color: #000;
+/* Toggle button for mobile */
+.navbar-toggler {
+  display: none;
+  background-color: cyan;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
 }
 
-.dark .navbar {
-  background-color: #333;
+/* Nav menu for larger screens */
+.navbar-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #ff6b6b;
   color: #fff;
 }
 
-.light .navbar {
-  background-color: #fff;
-  color: #000;
+/* Theme toggle button */
+.btn-theme-toggle {
+  margin-left: auto;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  color: #f20707;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-theme-toggle:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .btn-theme-toggle {
+    margin: 1rem auto 0 auto;
+  }
 }
