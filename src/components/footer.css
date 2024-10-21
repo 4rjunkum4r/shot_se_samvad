@@ -1,0 +1,51 @@
+
+.footer {
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Padding for the footer */
+  }
+  
+  .footer-content {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between sections */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the content */
+    padding: 0 15px; /* Padding on sides */
+  }
+  
+  .footer-section {
+    flex: 1; /* Allow sections to grow equally */
+    text-align: center; /* Center text */
+  }
+  
+  .contact-section {
+    display: flex; /* Flex for contact icons */
+    justify-content: center; /* Center the contact icons */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .fw-bold {
+    font-weight: bold; /* Bold text */
+  }
+  
+  .fs-4 {
+    font-size: 1.5rem; /* Font size for heading */
+  }
+  
+  .text-light {
+    color: #fff; /* Light text color */
+    text-decoration: none; /* No underline on links */
+  }
+  
+  .text-light:hover {
+    color: #ccc; /* Change color on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Stack items on smaller screens */
+      text-align: center; /* Center text on small screens */
+    }
+  }
+  
