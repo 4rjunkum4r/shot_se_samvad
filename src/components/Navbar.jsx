@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
 
 const Navbar = ({ theme, toggleTheme }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <motion.nav
       className={`navbar navbar-expand-lg ${
         theme === "dark" ? "navbar-dark bg-dark" : "navbar-light bg-light"
-      } py-3 sticky-top`}
+      } py-3 sticky-top ${isScrolled ? "scrolled" : ""}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
