@@ -1,3 +1,4 @@
+// src/components/Footer.jsx
 import React from 'react';
 import './footer.css'; // Ensure to import the corresponding CSS file
 

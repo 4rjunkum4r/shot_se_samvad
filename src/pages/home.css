@@ -1,11 +1,7 @@
-.home-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .section {
-    transition: all 0.3s ease;
-  }
-  
+/* src/pages/home.css */
+
+.home {
+  padding: 20px;
+}
+
+/* Add any additional styles for the Home component here */

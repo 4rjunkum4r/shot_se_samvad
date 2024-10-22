@@ -1,98 +1,92 @@
-/* Global reset */
+/* Base styles for the navbar */
 .navbar {
-  background-color: #938888;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: fixed;
-  top: 0;
+  position: sticky;
   width: 100%;
-  z-index: 1000;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8); /* Give navbar a background color (instead of transparent) */
   transition: background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly darker background when scrolled */
 }
 
-/* Brand logo styling */
-.navbar-brand {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
 
-.navbar-brand:hover {
-  color: #ff6b6b;
-}
-
-/* Toggle button for mobile */
-.navbar-toggler {
-  display: none;
-  background-color: cyan;
-  border: none;
-  font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Nav menu for larger screens */
-.navbar-menu {
+.navbar .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  margin-left: 1rem;
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  display: none; /* Hidden on larger screens */
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  font-size: 1.8rem;
+}
+
+.navbar-menu {
+  display: none; /* Hidden on mobile by default */
+}
+
+.navbar-menu.active {
+  display: block; /* Show menu when 'active' */
 }
 
 .navbar-nav {
-  list-style-type: none;
-  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-item {
-  margin: 0 1rem;
+  margin: 0.5rem 0;
 }
 
 .nav-link {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
-  background-color: #ff6b6b;
-  color: #fff;
+  color: #ff9800; /* Hover color */
 }
 
-/* Theme toggle button */
+/* Theme toggle button styles */
 .btn-theme-toggle {
-  margin-left: auto;
-  background-color: transparent;
-  border: 2px solid #fff;
-  padding: 0.5rem 1rem;
-  color: #f20707;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
-.btn-theme-toggle:hover {
-  background-color: #ff6b6b;
-  color: #fff;
-}
-
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
+/* Responsive styles for mobile */
+@media (max-width: 767px) {
   .navbar-toggler {
-    display: block;
+    display: block; /* Show the hamburger icon on small screens */
   }
 
   .navbar-menu {
@@ -101,26 +95,35 @@
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    flex-direction: column;
-    padding: 1rem 0;
     text-align: center;
   }
 
-  .navbar-menu.active {
-    display: flex;
-  }
-
   .navbar-nav {
-    flex-direction: column;
-    width: 100%;
+    display: block;
   }
 
   .nav-item {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .navbar-menu {
+    display: flex;
+    align-items: center;
   }
 
-  .btn-theme-toggle {
-    margin: 1rem auto 0 auto;
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin: 0 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1.5rem;
   }
 }

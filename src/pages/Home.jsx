@@ -1,5 +1,6 @@
+// src/pages/Home.jsx
 import React, { useEffect, useRef, useState } from "react";
-import Navbar  from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Section from "../components/Section"; // Import Section component
 import './home.css'; // Import Home styles
 
@@ -58,58 +59,43 @@ function Home() {
     },
     {
       title: "Our Mission",
-      content: "At Shot se Samwad, we are committed to demystifying the art and science of cinema.",
-      isRight: false,
+      content: "To educate, inspire, and empower the next generation of filmmakers through comprehensive resources and hands-on experience.",
+      isRight: true,
       imageSrc: photographyImg,
     },
     {
-      title: "What Sets Us Apart",
-      content: "We specialize in analyzing and teaching filmmaking techniques through the lens of Indian films, offering insights into both mainstream and alternative cinema.",
+      title: "Explore the World of Videography",
+      content: "Dive into the art of videography with our extensive tutorials, expert tips, and insights from industry veterans.",
       isRight: false,
       imageSrc: videographyImg,
     },
     {
-      title: "Our Offerings",
-      content: "Explore our range of masterclasses, workshops, and analysis series designed for filmmakers at all levels.",
-      isRight: false,
+      title: "Harnessing the Power of Software",
+      content: "Learn how to utilize cutting-edge software tools to enhance your filmmaking process.",
+      isRight: true,
       imageSrc: softwareImg,
     },
     {
-      title: "Join Our Community of Filmmakers",
-      content: "Subscribe to Shot se Samwad on YouTube to access our vast library of content and become part of a vibrant community of filmmakers and cinema enthusiasts.",
+      title: "Understanding Hardware Essentials",
+      content: "A guide to the essential hardware for filmmakers, ensuring you have the right equipment for your projects.",
       isRight: false,
       imageSrc: hardwareImg,
-    },
-    {
-      title: "Stay Connected",
-      content: "Follow us on social media for daily tips, industry news, and exclusive content.",
-      isRight: false,
-      imageSrc: softwareImg,
-    },
-    {
-      title: "Contact Us",
-      content: "For collaborations, sponsorships, or any inquiries: Email: info@shotsesamwad.com",
-      isRight: false,
-      imageSrc: videographyImg,
     },
   ];
 
   return (
-    <>
-      <Navbar />
-      <div className="home-container">
-        {sections.map((section, index) => (
-          <Section
-            key={section.title}
-            title={section.title}
-            content={section.content}
-            isRight={section.isRight}
-            imageSrc={section.imageSrc}
-            ref={(el) => (sectionRefs.current[index] = el)}
-          />
-        ))}
-      </div>
-    </>
+    <div className="home">
+      {sections.map((section, index) => (
+        <Section
+          key={index}
+          title={section.title}
+          content={section.content}
+          isRight={section.isRight}
+          imageSrc={section.imageSrc}
+          ref={(el) => (sectionRefs.current[index] = el)}
+        />
+      ))}
+    </div>
   );
 }
 

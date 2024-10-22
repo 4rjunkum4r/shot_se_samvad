@@ -1,3 +1,4 @@
+// src/components/Section.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import './section.css'; // Import Section styles

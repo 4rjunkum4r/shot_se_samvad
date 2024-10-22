@@ -1,35 +1,5 @@
-/* Global reset */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding-top: 80px; /* Add this to push the content below the navbar */
-}
+/* src/global.css */
 
-/* App container styles */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensures the app container is at least the height of the viewport */
-}
-
-/* Content area */
-.content {
-  flex-grow: 1; /* This makes the content area take up the available space */
-  padding-bottom: 3rem; /* Optional: To make sure there's space between content and footer */
-  padding-top: 5rem; /* Optional: Additional spacing for the content */
-}
-
-/* Footer styles */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-  position: relative; /* Not fixed or absolute, so it naturally stays at the bottom */
-}
-
-/* Global styles for light and dark themes */
 .app-container.light {
   background-color: #ffffff; /* Light background color */
   color: #000000; /* Dark text color */
@@ -40,53 +10,10 @@ html, body {
   color: #ffffff; /* Light text color */
 }
 
-/* Navbar styles */
-.navbar {
-  background-color: #938888;
-  transition: background-color 0.3s ease;
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Link and button colors */
-.nav-link {
-  color: #fff; /* Default link color */
-}
-
-.btn-theme-toggle {
-  color: #f20707; /* Default button text color */
-}
-
-/* Additional styles for light theme */
-.app-container.light .navbar {
-  background-color: #aa6262; /* Light navbar background */
-}
-
-.app-container.light .nav-link {
-  color: #000; /* Dark text for links in light mode */
-}
-
-.app-container.light .btn-theme-toggle {
-  border-color: #000; /* Dark border for button in light mode */
-}
-
-/* Additional styles for dark theme */
-.app-container.dark .navbar {
-  background-color: #333; /* Dark navbar background */
-}
-
-.app-container.dark .nav-link {
-  color: #fff; /* Light text for links in dark mode */
-}
-
-.app-container.dark .btn-theme-toggle {
-  border-color: #fff; /* Light border for button in dark mode */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  /* Add responsive styles here if needed */
-}
+/* Additional global styles can be added here */
