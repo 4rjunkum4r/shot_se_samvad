@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import { Editor, EditorState, RichUtils, convertToRaw, convertFromRaw, ContentState } from "draft-js";
+import {
+  Editor,
+  EditorState,
+  RichUtils,
+  convertToRaw,
+  convertFromRaw,
+  ContentState,
+} from "draft-js";
 import "draft-js/dist/Draft.css";
 import jsPDF from "jspdf";
 import "./scriptEditor.css"; // Import your styles
 
 const ScriptEditor = () => {
-  const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(() =>
+    EditorState.createEmpty()
+  );
 
   // Function to handle key commands (e.g., Bold, Italic)
   const handleKeyCommand = (command) => {
@@ -40,7 +49,9 @@ const ScriptEditor = () => {
 
   return (
     <div>
-      <h2><center>Script Editor</center></h2>
+      <h2>
+        <center>Script Editor</center>
+      </h2>
 
       {/* Toolbar */}
       <div className="toolbar">
@@ -61,7 +72,9 @@ const ScriptEditor = () => {
 
       {/* Save Script Buttons */}
       <div className="save-buttons">
-        <center><button onClick={saveScriptAsPDF}>Download as PDF</button></center>
+        <center>
+          <button onClick={saveScriptAsPDF}>Download as PDF</button>
+        </center>
       </div>
     </div>
   );

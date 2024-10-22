@@ -1,5 +1,5 @@
-import React from 'react';
-import './videos.css'; // Add your CSS here
+import React from "react";
+import "./videos.css"; // Add your CSS here
 
 const Videos = () => {
   return (
