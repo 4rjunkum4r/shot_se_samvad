@@ -40,7 +40,7 @@ const ScriptEditor = () => {
 
   return (
     <div>
-      <h2>Script Editor</h2>
+      <h2><center>Script Editor</center></h2>
 
       {/* Toolbar */}
       <div className="toolbar">
@@ -61,7 +61,7 @@ const ScriptEditor = () => {
 
       {/* Save Script Buttons */}
       <div className="save-buttons">
-        <button onClick={saveScriptAsPDF}>Download as PDF</button>
+        <center><button onClick={saveScriptAsPDF}>Download as PDF</button></center>
       </div>
     </div>
   );

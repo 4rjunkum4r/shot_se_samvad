@@ -1,6 +1,5 @@
 // src/pages/Home.jsx
 import React, { useEffect, useRef, useState } from "react";
-import Navbar from "../components/Navbar";
 import Section from "../components/Section"; // Import Section component
 import './home.css'; // Import Home styles
 
@@ -83,8 +82,8 @@ function Home() {
     },
   ];
 
-  return (
-    <div className="home">
+  return (<>
+  <div className="home">
       {sections.map((section, index) => (
         <Section
           key={index}
@@ -96,6 +95,9 @@ function Home() {
         />
       ))}
     </div>
+    
+  </>
+    
   );
 }
 

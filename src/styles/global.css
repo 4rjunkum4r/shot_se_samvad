@@ -1,5 +1,9 @@
 /* src/global.css */
-
+.app-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .app-container.light {
   background-color: #ffffff; /* Light background color */
   color: #000000; /* Dark text color */
@@ -7,7 +11,7 @@
 
 .app-container.dark {
   background-color: #121212; /* Dark background color */
-  color: #ffffff; /* Light text color */
+  color: #ff0000; /* Light text color */
 }
 
 /* Global styles */
@@ -15,5 +19,6 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 
 /* Additional global styles can be added here */

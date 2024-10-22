@@ -4,8 +4,8 @@ import './videos.css'; // Add your CSS here
 const Videos = () => {
   return (
     <div className="videos-page">
-      <h1>Videos Page</h1>
-      <p>Here is where your videos content will go.</p>
+      <h1>Soon we will start to upload videos, So please be patient 😊</h1>
+      <p>Stay tuned for more updates.......... ✌️</p>
     </div>
   );
 };

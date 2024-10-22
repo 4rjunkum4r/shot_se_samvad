@@ -29,15 +29,6 @@ const Footer = () => {
             </a>
             <a
               className="text-light"
-              href="tel:+916260085106"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Phone"
-            >
-              <i className="fa fa-phone mx-2"></i>
-            </a>
-            <a
-              className="text-light"
               href="mailto:shotsesamvad11@gmail.com"
               target="_blank"
               rel="noreferrer"
